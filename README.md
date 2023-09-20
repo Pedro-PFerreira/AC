@@ -32,6 +32,8 @@ Machine Learning Project
 
 ### Data
 
+- These are the classes of our dataset
+
 #### teams_post
 | Attribute  | Type         | Meaning                         |
 |------------|--------------|---------------------------------|
@@ -48,45 +50,45 @@ Machine Learning Project
 | year       | INT          | Year of coaching                |
 | tmID       | VARCHAR(255) | Team ID                         |
 | lgID       | VARCHAR(255) | League ID                       |
-| stint      | INT          | Coaching stint                   |
+| stint      | INT          | Coaching stint                  |
 | won        | INT          | Number of wins as a coach       |
 | lost       | INT          | Number of losses as a coach     |
 | post_wins  | INT          | Number of postseason wins       |
 | post_losses| INT          | Number of postseason losses     |
 
 #### teams
-| Attribute  | Type         | Meaning                         |
-|------------|--------------|---------------------------------|
-| year       | INT          | Year of the basketball season   |
-| lgID       | VARCHAR(255) | League ID                       |
-| tmID       | VARCHAR(255) | Team ID                         |
-| franchID   | VARCHAR(255) | Franchise ID                    |
-| confID     | VARCHAR(255) | Conference ID                   |
-| divID      | VARCHAR(255) | Division ID                     |
-| rank       | INT          | Team's rank                     |
-| playoff    | VARCHAR(255) | Playoff status                  |
-| seeded     | INT          | Seeded position in playoffs     |
-| firstRound | VARCHAR(255) | First round result              |
-| semis      | VARCHAR(255) | Semifinals result               |
-| finals     | VARCHAR(255) | Finals result                   |
-| name       | VARCHAR(255) | Team name                       |
-| o_fgm      | INT          | Offensive field goals made      |
-| o_fga      | INT          | Offensive field goals attempted |
-| o_ftm      | INT          | Offensive free throws made      |
-| o_fta      | INT          | Offensive free throws attempted |
-| o_3pm      | INT          | Offensive three-pointers made   |
-| o_3pa      | INT          | Offensive three-pointers attempted |
-| o_oreb     | INT          | Offensive offensive rebounds    |
-| o_dreb     | INT          | Offensive defensive rebounds    |
-| o_reb      | INT          | Offensive total rebounds        |
-| o_asts     | INT          | Offensive assists               |
-| o_pf       | INT          | Offensive personal fouls        |
-| o_stl      | INT          | Offensive steals                |
-| o_to       | INT          | Offensive turnovers             |
-| o_blk      | INT          | Offensive blocks                |
-| o_pts      | INT          | Offensive points                |
-| d_fgm      | INT          | Defensive field goals made      |
-| d_fga      | INT          | Defensive field goals attempted |
+| Attribute  | Type         | Meaning                          |
+|------------|--------------|----------------------------------|
+| year       | INT          | Year of the basketball season    |
+| lgID       | VARCHAR(255) | League ID                        |
+| tmID       | VARCHAR(255) | Team ID                          |
+| franchID   | VARCHAR(255) | Franchise ID                     |
+| confID     | VARCHAR(255) | Conference ID                    |
+| divID      | VARCHAR(255) | Division ID                      |
+| rank       | INT          | Team's rank                      | 
+| playoff    | VARCHAR(255) | Playoff status                   | 
+| seeded     | INT          | Seeded position in playoffs      |
+| firstRound | VARCHAR(255) | First round result               |
+| semis      | VARCHAR(255) | Semifinals result                |
+| finals     | VARCHAR(255) | Finals result                    |
+| name       | VARCHAR(255) | Team name                        |
+| o_fgm      | INT          | Overall field goals made         |
+| o_fga      | INT          | Overall field goals attempted    |
+| o_ftm      | INT          | Overall free throws made         |
+| o_fta      | INT          | Overall free throws attempted    |
+| o_3pm      | INT          | Overall three-pointers made      |
+| o_3pa      | INT          | Overall three-pointers attempted |
+| o_oreb     | INT          | Overall offensive rebounds       |
+| o_dreb     | INT          | Overall defensive rebounds       |
+| o_reb      | INT          | Overall total rebounds           |
+| o_asts     | INT          | Overall assists                  |
+| o_pf       | INT          | Overall personal fouls           |
+| o_stl      | INT          | Overall steals                   |
+| o_to       | INT          | Overall turnovers                |
+| o_blk      | INT          | Overall blocks                   |
+| o_pts      | INT          | Overall points                   |
+| d_fgm      | INT          | Defended field goals made        |
+| d_fga      | INT          | Defended field goals attempted   |
  
 #### series_post
 | Attribute  | Type         | Meaning                         |
