@@ -30,6 +30,134 @@ Machine Learning Project
 
 - Since we are beginning to work (20/09/2023) on this project,we can't define in this moment clear objectives to achive with our data mining model.
 
+### Data
+
+#### teams_post
+| Attribute  | Type         | Meaning                         |
+|------------|--------------|---------------------------------|
+| year       | INT          | Year of the basketball season   |
+| tmID       | VARCHAR(255) | Team ID                         |
+| lgID       | VARCHAR(255) | League ID                       |
+| W          | INT          | Number of wins                  |
+| L          | INT          | Number of losses                |
+
+#### coaches
+| Attribute  | Type         | Meaning                         |
+|------------|--------------|---------------------------------|
+| coachID    | VARCHAR(255) | Coach ID                        |
+| year       | INT          | Year of coaching                |
+| tmID       | VARCHAR(255) | Team ID                         |
+| lgID       | VARCHAR(255) | League ID                       |
+| stint      | INT          | Coaching stint                   |
+| won        | INT          | Number of wins as a coach       |
+| lost       | INT          | Number of losses as a coach     |
+| post_wins  | INT          | Number of postseason wins       |
+| post_losses| INT          | Number of postseason losses     |
+
+#### teams
+| Attribute  | Type         | Meaning                         |
+|------------|--------------|---------------------------------|
+| year       | INT          | Year of the basketball season   |
+| lgID       | VARCHAR(255) | League ID                       |
+| tmID       | VARCHAR(255) | Team ID                         |
+| franchID   | VARCHAR(255) | Franchise ID                    |
+| confID     | VARCHAR(255) | Conference ID                   |
+| divID      | VARCHAR(255) | Division ID                     |
+| rank       | INT          | Team's rank                     |
+| playoff    | VARCHAR(255) | Playoff status                  |
+| seeded     | INT          | Seeded position in playoffs     |
+| firstRound | VARCHAR(255) | First round result              |
+| semis      | VARCHAR(255) | Semifinals result               |
+| finals     | VARCHAR(255) | Finals result                   |
+| name       | VARCHAR(255) | Team name                       |
+| o_fgm      | INT          | Offensive field goals made      |
+| o_fga      | INT          | Offensive field goals attempted |
+| o_ftm      | INT          | Offensive free throws made      |
+| o_fta      | INT          | Offensive free throws attempted |
+| o_3pm      | INT          | Offensive three-pointers made   |
+| o_3pa      | INT          | Offensive three-pointers attempted |
+| o_oreb     | INT          | Offensive offensive rebounds    |
+| o_dreb     | INT          | Offensive defensive rebounds    |
+| o_reb      | INT          | Offensive total rebounds        |
+| o_asts     | INT          | Offensive assists               |
+| o_pf       | INT          | Offensive personal fouls        |
+| o_stl      | INT          | Offensive steals                |
+| o_to       | INT          | Offensive turnovers             |
+| o_blk      | INT          | Offensive blocks                |
+| o_pts      | INT          | Offensive points                |
+| d_fgm      | INT          | Defensive field goals made      |
+| d_fga      | INT          | Defensive field goals attempted |
+ 
+#### series_post
+| Attribute  | Type         | Meaning                         |
+|------------|--------------|---------------------------------|
+| year       | INT          | Year of the basketball season   |
+| round      | VARCHAR(255) | Playoff round                   |
+| series     | VARCHAR(255) | Series name                     |
+| tmIDWinner | VARCHAR(255) | Winning team's ID               |
+| lgIDWinner | VARCHAR(255) | Winning team's league ID        |
+| tmIDLoser  | VARCHAR(255) | Losing team's ID                |
+| lgIDLoser  | VARCHAR(255) | Losing team's league ID         |
+| W          | INT          | Number of wins in the series    |
+| L          | INT          | Number of losses in the series  |
+
+#### players_teams
+| Attribute  | Type         | Meaning                         |
+|------------|--------------|---------------------------------|
+| playerID   | VARCHAR(255) | Player ID                       |
+| year       | INT          | Year of the basketball season   |
+| stint      | INT          | Player's stint with the team    |
+| tmID       | VARCHAR(255) | Team ID                         |
+| ldID       | VARCHAR(255) | League ID                       |
+| GP         | INT          | Games played                    |
+| GS         | INT          | Games started                   |
+| minutes    | INT          | Total minutes played            |
+| points     | INT          | Total points scored             |
+| oRebounds  | INT          | Offensive rebounds              |
+| dRebounds  | INT          | Defensive rebounds              |
+| rebounds   | INT          | Total rebounds                  |
+| assists    | INT          | Total assists                   |
+| steals     | INT          | Total steals                    |
+| blocks     | INT          | Total blocks                    |
+| turnovers  | INT          | Total turnovers                 |
+| PF         | INT          | Personal fouls                  |
+| fgAttempted| INT          | Field goals attempted           |
+| fgMade     | INT          | Field goals made                |
+| ftAttempted| INT          | Free throws attempted           |
+| ftMade     | INT          | Free throws made                |
+| threeAttempted | INT     | Three-pointers attempted        |
+| threeMade  | INT          | Three-pointers made             |
+| dq         | INT          | Disqualifications                |
+| PostGP     | INT          | Postseason games played         |
+| PostGS     | INT          | Postseason games started        |
+| PostMinutes| INT          | Total postseason minutes        |
+| PostPoints | INT          | Total postseason points         |
+| PostoRebounds | INT      | Total postseason offensive rebounds |
+| PostdRebounds | INT      | Total postseason defensive rebounds |
+
+#### players
+| Attribute  | Type         | Meaning                         |
+|------------|--------------|---------------------------------|
+| bioID      | VARCHAR(255) | Player's bio ID                 |
+| pos        | VARCHAR(255) | Player's position               |
+| firstseason| INT          | First season played in          |
+| lastseason | INT          | Last season played in           |
+| height     | FLOAT        | Player's height in inches       |
+| weight     | INT          | Player's weight in pounds       |
+| college    | VARCHAR(255) | College attended                |
+| collegeOther| VARCHAR(255)| Other colleges attended         |
+| birthDate  | VARCHAR(255) | Date of birth                   |
+| deathDate  | VARCHAR(255) | Date of death (if applicable)   |
+
+#### awards_players
+| Attribute  | Type         | Meaning                         |
+|------------|--------------|---------------------------------|
+| playerID   | VARCHAR(255) | Player ID                       |
+| award      | VARCHAR(255) | Award received by the player    |
+| year       | INT          | Year in which the award was received |
+| lgID       | VARCHAR(255) | League ID in which the award was
+
+
 ### Produce Project Plan
 
 - We're planning our project in this way:
