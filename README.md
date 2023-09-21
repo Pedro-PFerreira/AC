@@ -30,6 +30,25 @@ Machine Learning Project
 
 - Since we are beginning to work (20/09/2023) on this project,we can't define in this moment clear objectives to achive with our data mining model.
 
+### Produce Project Plan
+
+- We're planning our project in this way:
+
+1) Study Data
+
+2) Convert Data (CSV to SQL)
+
+3) Data Exploration
+
+4) Data Preparation
+
+5) Data Modelling
+
+6) Evaluation
+
+7) Deployment
+
+
 ### Data
 
 - These are the classes of our dataset
@@ -159,21 +178,9 @@ Machine Learning Project
 | year       | INT          | Year in which the award was received |
 | lgID       | VARCHAR(255) | League ID in which the award was
 
+### Data exploration
 
-### Produce Project Plan
+- Since we have our dataset in CSV, it would be useful to transform the information into SQL, so that we can use it to make more complex queries and extract more information with our data.
 
-- We're planning our project in this way:
+- So, we made a script that collects the CSV's' data and writes in our "database.sql" file, which we will use to make our queries.
 
-1) Study Data
-
-2) Convert Data (CSV to SQL)
-
-3) Data Exploration
-
-4) Data Preparation
-
-5) Data Modelling
-
-6) Evaluation
-
-7) Deployment
