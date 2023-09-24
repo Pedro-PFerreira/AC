@@ -2560,7 +2560,7 @@ INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('bjorkan01w','F','0','0','72.0','166','Tennessee','nan','1989-07-14','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('bjorkte01w','C','0','0','76.0','175','Colorado','nan','1982-06-29','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('blackch01w','C','0','0','77.0','188','Duke','nan','1985-11-12','0000-00-00');
-INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('blackde01w','G','0','0','63.0','124','St. Joseph's','nan','1966-07-29','0000-00-00');
+INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('blackde01w','G','0','0','63.0','124','St. Joseph''s','nan','1966-07-29','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('bladerh01w','G','0','0','67.0','138','Vanderbilt','nan','1972-10-29','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('blodgci01w','G','0','0','69.0','130','Maine','nan','1975-12-23','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('blueni01w','G','0','0','68.0','163','UCLA','nan','1984-03-29','0000-00-00');
@@ -2660,7 +2660,7 @@ INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('colemma01w','G-F','0','0','73.0','160','Maryland','nan','1987-01-04','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('colleka01w','G-F','0','0','70.0','145','Maryland','nan','1971-03-17','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('colsosy01w','G','0','0','68.0','140','Texas A&M','nan','1989-08-06','0000-00-00');
-INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('compame01w','G','0','0','69.0','143','St. Joseph's','nan','1975-09-18','0000-00-00');
+INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('compame01w','G','0','0','69.0','143','St. Joseph''s','nan','1975-09-18','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('congran01w','F-C','0','0','74.0','183','Mercer','nan','1970-06-03','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('conklab01w','F','0','0','75.0','175','Tennessee','nan','1975-02-10','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('consuca01w','G','0','0','68.0','144','Iowa','nan','1979-03-04','0000-00-00');
@@ -2836,7 +2836,7 @@ INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('hillmli99w','nan','0','0','0.0','0','nan','nan','0000-00-00','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('hillmna01w','nan','0','0','0.0','0','Vanderbilt','nan','0000-00-00','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('hledeko01w','G','0','0','69.0','150','Duquesne','nan','1975-03-29','0000-00-00');
-INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('hodgeda01w','G-F','0','0','73.0','170','St. Joseph's','nan','1968-01-21','0000-00-00');
+INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('hodgeda01w','G-F','0','0','73.0','170','St. Joseph''s','nan','1968-01-21','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('hodgedo01w','G','0','0','69.0','160','Louisiana State','nan','1982-07-19','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('hodgero01w','G','0','0','71.0','165','Florida State','nan','1982-07-19','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('hodgesa01w','F-G','0','0','69.0','0','New Orleans','nan','1962-07-31','0000-00-00');
@@ -2970,7 +2970,7 @@ INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('mahorri01w','nan','0','0','0.0','0','nan','nan','0000-00-00','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('maigaha01w','G-F','0','0','73.0','160','Old Dominion','nan','1978-04-25','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('malcona01w','F','0','0','73.0','170','Providence','nan','1975-11-27','0000-00-00');
-INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('malloam01w','G','0','0','64.0','148','St. Joseph's','nan','1970-04-21','0000-00-00');
+INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('malloam01w','G','0','0','64.0','148','St. Joseph''s','nan','1970-04-21','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('malloso01w','C','0','0','77.0','210','Georgia Tech','nan','1981-09-02','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('maltsev01w','G','0','0','71.0','165','nan','nan','1978-12-20','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('mannish01w','F-C','0','0','75.0','186','North Carolina State','nan','1969-03-20','0000-00-00');
@@ -3041,7 +3041,7 @@ INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('morrila01w','F','0','0','73.0','160','Auburn','nan','1974-05-26','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('morrizi01w','C','0','0','76.0','0','none','nan','1989-02-15','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('mosbybe01w','F','0','0','73.0','172','Baylor','Florida','1984-02-14','0000-00-00');
-INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('mosleju01w','F','0','0','73.0','170','Hawai'i','nan','1968-03-17','0000-00-00');
+INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('mosleju01w','F','0','0','73.0','170','Hawaii','nan','1968-03-17','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('moweje01w','C','0','0','77.0','236','Oregon','nan','1978-02-25','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('mulitna01w','C','0','0','75.0','207','Stanford','nan','1976-03-06','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('murphma99w','nan','0','0','0.0','0','nan','nan','0000-00-00','0000-00-00');
@@ -3093,7 +3093,7 @@ INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('pennjo01w','F','0','0','72.0','160','South Carolina','nan','1979-09-10','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('perazja01w','G-F','0','0','72.0','170','Maryland','nan','1960-12-06','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('perkiji01w','G','0','0','68.0','155','Texas Tech','nan','1982-02-23','0000-00-00');
-INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('perpeer01w','F-G','0','0','75.0','181','The Master's College','nan','1979-06-05','0000-00-00');
+INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('perpeer01w','F-G','0','0','75.0','181','The Master''s College','nan','1979-06-05','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('perroki01w','G','0','0','65.0','130','SW Louisiana','nan','1967-01-18','1999-08-19');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('peterde01w','F','0','0','74.0','170','Notre Dame','nan','1989-10-08','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('petroso01w','F','0','0','73.0','0','none','nan','1989-02-18','0000-00-00');
@@ -3168,7 +3168,7 @@ INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('sampsto01w','G','0','0','70.0','0','North Carolina','nan','1972-03-02','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('samsh01w','F-G','0','0','72.0','160','Vanderbilt','nan','1974-05-05','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('sanchis01w','G','0','0','70.0','152','nan','nan','1976-11-28','0000-00-00');
-INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('sandeam01w','G','0','0','71.0','156','Hawai'i','nan','1983-06-05','0000-00-00');
+INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('sandeam01w','G','0','0','71.0','156','Hawaii','nan','1983-06-05','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('sandish01w','G','0','0','72.0','145','nan','nan','1969-01-22','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('sanfona01w','F-C','0','0','76.0','200','Kansas','nan','1976-05-10','0000-00-00');
 INSERT INTO players(bioID, pos, firstseason, lastseason, height, weight, college, collegeOther, birthDate, deathDate) VALUES('sanniol01w','C','0','0','74.0','0','West Virginia','nan','1986-08-21','0000-00-00');
