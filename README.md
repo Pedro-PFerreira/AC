@@ -194,7 +194,7 @@ Machine Learning Project
 
 - The most relevant attributes in the team's dataset are the number of wins and losses and all the games' statistics, such as points made, steals, blocks, etc. during the season. Besides that, some statistics are interesting in terms of prediction.
 
-- If we see the wins and losses in the teams_post relation, as well as the if they won or not in first round, semi-finals and finals, we could conclude that we had some data leakage, since we are trying to predict if a team will classify to the playoffs, and we have the information if they won or not in the playoffs season. As a result, this information refers about a period of time after the the playoffs.
+- If we see the wins and losses in the teams_post relation, as well as the if they won or not in first round, semi-finals and finals, we could conclude that we had some data leakage, since we are trying to predict if a team will classify to the playoffs, and we have the information if they won or not in the playoffs season. As a result, this information refers about a period of time after the the playoffs. As a result, we will not use these variables.
 
 - Also, since they all had the same league and division' ID, the same value for seed for all the teams, and the conference and the franchise the teams have is not relevant, we decided to eliminate those attributes, since they don't give us any relevant information.
 
@@ -202,21 +202,32 @@ Machine Learning Project
 
 - Ranks: we could extract better informations if they were by year and by team.
 
-- Home Wins and Home Losses: we could used an histogram to visualize the data of these to attributes. It is quite probable to correlate the number of home wins and losses with the stadium's attendance.
+- Wins and Losses: We made an Line Chart about the whole season's records, where each line represents a team. We feel the Home Wins and Losses, as well as Away Wins and Losses are higly correlated with the Wins and Losses, so we will not use them. It is shown below the victories and the defeats by each team in the last 10 years, respectively.
 
-![Home Wins](./images/home_wins.png)
+![Wins](./images/wins.png)
 
 
-![Home Losses](./images/home_losses.png)
+![Losses](./images/losses.png)
 
-- Away Wins and Away Losses: we could used an histogram to visualize the data of these to attributes. We almost sure these attributes are indirectly correlated with home losses and home wins, respectively.
+- Overall statistics: Since we had several overall statistics, we chose to do a boxplot chart to see the evolution of the teams' points over the these 10-year period. Even though we knew that free-throws, assists, 3-points and field-points are correlated to the "points" variable, we decided to keep them.
 
-![Away Wins](./images/away_wins.png)
+![Points](./images/points.png)
 
-![Away Losses](./images/away_losses.png)
+- Defensive statistics: We also had several defensive statistics, so we decided to do a boxplot chart to see the evolution of the teams' points defended over the these 10-year period. Even though we knew that defensive rebounds, offensive rebounds, steals, blocks and turnovers are correlated to the "points" variable, we decided to keep them.
 
-!
+![Defended Points](./images/defended_points.png)
 
+- We concluded that in these variable there is some teams that varies a lot from the others, so we will have to take that into account when we are making our models.
+
+- Another relevant statistic is the number of minutes played by each team, so we decided to do a boxplot chart to see the evolution of the teams' minutes played over the these 10-year period. We chose this one instead of the games played, due to the fact that there is a small variation of the games played, so the minutes would be a better statistic to use.
+
+![Minutes](./images/minutes.png)
+
+- We also decided to see the evolution of the fan's attendance in the games, so we did a linechart to see the evolution of the teams' attendance over the these 10-year period.
+
+![Attendance](./images/attendance.png)
+
+- We chose not to use the teams_post relation due to the data leakage effect of its attributes.
 
 ### Data Cleaning
 - After analyzing the datasets provided, we noticed that some would need to be processed before we could analyze the relevant variables to take into account for our forecasting models.
