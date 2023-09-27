@@ -184,3 +184,13 @@ Machine Learning Project
 
 - So, we made a script that collects the CSV's' data and writes in our "database.sql" file, which we will use to make our queries.
 
+### Data Cleaning
+- After analyzing the datasets provided, we noticed that some would need to be processed before we could analyze the relevant variables to take into account for our forecasting models.
+- We decided to use RapidMiner for the data processing tool, as it would be quicker to obtain the clean csv and it is a tool that has already been used by all the members of the group, so everyone is comfortable with it for this stage of the project.
+- So we divided up the datasets among the three team members. The following had to be dealt with:
+    - eliminate duplicates
+    - checking for undefined values and/or outliers
+    - eliminating rows that were not used or related to any other table, as they had all the values missing
+- The datasets that required the treatment described above were:
+    - players
+    - teams
