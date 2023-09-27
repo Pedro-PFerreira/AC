@@ -184,6 +184,40 @@ Machine Learning Project
 
 - So, we made a script that collects the CSV's' data and writes in our "database.sql" file, which we will use to make our queries.
 
+- But first we need to visualize the data we had.
+
+### Data Visualization
+
+- We decide to make some graphs about the data we had, so we can have a better understanding of it.
+
+#### Teams
+
+- The most relevant attributes in the team's dataset are the number of wins and losses and all the games' statistics, such as points made, steals, blocks, etc. during the season. Besides that, some statistics are interesting in terms of prediction.
+
+- If we see the wins and losses in the teams_post relation, as well as the if they won or not in first round, semi-finals and finals, we could conclude that we had some data leakage, since we are trying to predict if a team will classify to the playoffs, and we have the information if they won or not in the playoffs season. As a result, this information refers about a period of time after the the playoffs.
+
+- Also, since they all had the same league and division' ID, the same value for seed for all the teams, and the conference and the franchise the teams have is not relevant, we decided to eliminate those attributes, since they don't give us any relevant information.
+
+- Here's some graphs about the teams dataset:
+
+- Ranks: we could extract better informations if they were by year and by team.
+
+- Home Wins and Home Losses: we could used an histogram to visualize the data of these to attributes. It is quite probable to correlate the number of home wins and losses with the stadium's attendance.
+
+![Home Wins](./images/home_wins.png)
+
+
+![Home Losses](./images/home_losses.png)
+
+- Away Wins and Away Losses: we could used an histogram to visualize the data of these to attributes. We almost sure these attributes are indirectly correlated with home losses and home wins, respectively.
+
+![Away Wins](./images/away_wins.png)
+
+![Away Losses](./images/away_losses.png)
+
+!
+
+
 ### Data Cleaning
 - After analyzing the datasets provided, we noticed that some would need to be processed before we could analyze the relevant variables to take into account for our forecasting models.
 - We decided to use RapidMiner for the data processing tool, as it would be quicker to obtain the clean csv and it is a tool that has already been used by all the members of the group, so everyone is comfortable with it for this stage of the project.
@@ -194,3 +228,4 @@ Machine Learning Project
 - The datasets that required the treatment described above were:
     - players
     - teams
+    - ...
