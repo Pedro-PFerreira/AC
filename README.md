@@ -229,6 +229,16 @@ Machine Learning Project
 
 - We chose not to use the teams_post relation due to the data leakage effect of its attributes.
 
+#### Coaches
+- In this dataset, all the data was organized and normalized, so there was no need to use a technique or treatment for outliers and missing values. With regard to analyzing the data in terms of relevance to the prediction we wanted to make, we excluded only two columns: stints and lgID, since the leagues are the same for all the coaches and would therefore not be differentiating factors. The remaining attributes bring value to the predictions in the sense that they are based on the number of wins and losses of each coach, and are therefore directly related to the probability of their team qualifying for the playoffs or not.
+
+
+#### Award Player
+- This dataset contains few attributes, so from our analysis they are all relevant except for the information about the leagues, since as in the previous dataset this information is the same for all lines and therefore has no influence on differentiating results.
+- We thought that one way of integrating this information about players and coaches who have won awards into the corresponding tables would be to add a column to the player and coach tables with Boolean values to inform whether or not a player or coach has won an award. This data is useful in the sense that an award-winning player or coach brings a lot of value to the team and therefore increases the likelihood of leading it to victory.
+- From our analysis, there are no correlated attributes either, so it wasn't necessary to eliminate any more columns.
+
+
 ### Data Cleaning
 - After analyzing the datasets provided, we noticed that some would need to be processed before we could analyze the relevant variables to take into account for our forecasting models.
 - We decided to use RapidMiner for the data processing tool, as it would be quicker to obtain the clean csv and it is a tool that has already been used by all the members of the group, so everyone is comfortable with it for this stage of the project.
