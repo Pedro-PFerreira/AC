@@ -178,7 +178,7 @@ Machine Learning Project
 | year       | INT          | Year in which the award was received |
 | lgID       | VARCHAR(255) | League ID in which the award was
 
-### Data exploration
+### Data understanding
 
 - Since we have our dataset in CSV, it would be useful to transform the information into SQL, so that we can use it to make more complex queries and extract more information with our data.
 
@@ -239,7 +239,10 @@ Machine Learning Project
 - From our analysis, there are no correlated attributes either, so it wasn't necessary to eliminate any more columns.
 
 
-### Data Cleaning
+### Data Preparation
+
+#### Data Cleaning
+
 - After analyzing the datasets provided, we noticed that some would need to be processed before we could analyze the relevant variables to take into account for our forecasting models.
 - We decided to use RapidMiner for the data processing tool, as it would be quicker to obtain the clean csv and it is a tool that has already been used by all the members of the group, so everyone is comfortable with it for this stage of the project.
 - So we divided up the datasets among the three team members. The following had to be dealt with:
@@ -250,3 +253,10 @@ Machine Learning Project
     - players
     - teams
     - ...
+
+#### Feature extraction (feature selection)
+
+- In this part, we were selecting the variables we want to consider in our models. We did some scripts in Python and used RapidMiner to build the correlation matrixes of the attributes of each relation, so we could see which ones were more correlated with each other.
+
+![Matrix correlation teams](./images/matrix_correlation_teams.png)
+
