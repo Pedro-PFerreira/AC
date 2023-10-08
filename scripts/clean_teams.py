@@ -90,7 +90,7 @@ def mergeTeams():
 
     # convert the team IDs to numbers
 
-    df_teams['tmID'] = df_teams['tmID'].apply(lambda x: teams_dict[x])
+    #df_teams['tmID'] = df_teams['tmID'].apply(lambda x: teams_dict[x])
 
     # write to csv
     df_teams.to_csv('data/cleaned/teams_merged.csv', index=False)
