@@ -68,7 +68,11 @@ def mergeTeams():
 
     # dropped columns that are correlated to the new column
 
-    df_teams = df_teams.drop(['o_pts', 'o_fgm', 'o_fta', 'o_ftm', 'o_oreb', 'o_oreb', 'o_stl', 'o_asts', 'o_blk', 'o_pf', 'o_to'], axis=1)
+    df_teams = df_teams.drop(['o_fgm','o_fga','o_ftm','o_fta','o_3pm','o_3pa',
+                             'o_oreb','o_dreb','o_reb','o_asts','o_pf','o_stl',
+                             'o_to','o_blk','o_pts','d_fgm','d_fga','d_ftm','d_fta',
+                             'd_3pm','d_3pa','d_oreb','d_dreb','d_reb','d_asts',
+                             'd_pf','d_stl','d_to','d_blk','d_pts'], axis=1)
 
     # convert the binary attributes to 0 and 1, so that we can use them in the correlation matrix
 

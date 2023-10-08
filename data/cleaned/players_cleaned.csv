@@ -1,4 +1,4 @@
-"bioID";"pos";"firstseason";"lastseason";"height";"weight";"college";"collegeOther";"birthDate";"deathDate"
+bioID;pos;firstseason;lastseason;height;weight;college;collegeOther;birthDate;deathDate
 "abrahta01w";"C";0;0;74.0;190;"George Washington";;1975-09-27 00:00:00;"0000-00-00"
 "abrossv01w";"F";0;0;74.0;169;"Connecticut";;1980-07-09 00:00:00;"0000-00-00"
 "adairje01w";"C";0;0;76.0;197;"George Washington";;1986-12-19 00:00:00;"0000-00-00"
