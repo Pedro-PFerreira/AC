@@ -60,7 +60,7 @@ def mergeTeams():
 
     # drop redundant columns- won and lost give the same information
     # as confW and confL + W + L. Also, L = number of games - W
-    df_teams = df_teams.drop(['W', 'L', 'confW', 'confL', 'awayL','won', 'lost'], axis=1)
+    df_teams = df_teams.drop(['W', 'confW', 'confL', 'awayL','won', 'lost'], axis=1)
 
     # insert a new column, in order to extract better information about the team's performance
 
