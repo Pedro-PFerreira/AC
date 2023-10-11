@@ -254,6 +254,9 @@ Machine Learning Project
     - teams
     - ...
 
+
+
+
 #### Feature extraction (feature selection)
 
 - In this part, we were selecting the variables we want to consider in our models. We did some scripts in Python and used RapidMiner to build the correlation matrixes of the attributes of each relation, so we could see which ones were more correlated with each other and the target value.
