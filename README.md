@@ -255,6 +255,9 @@ Machine Learning Project
     - checking for undefined values and/or outliers and normalize/replace them
     - eliminating rows that were not used or related to any other table, as they had all the values missing
 
+
+
+
 #### Feature extraction (feature selection)
 
 - In this part, we were selecting the variables we want to consider in our models. We did some scripts in Python and used RapidMiner to build the correlation matrixes of the attributes of each relation, so we could see which ones were more correlated with each other and the target value.

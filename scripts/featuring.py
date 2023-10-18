@@ -1,51 +1,39 @@
 import pandas as pd
 import numpy as np
+from sklearn.tree import DecisionTreeClassifier
 
+df = pd.read_csv('final_dataset.csv', delimiter=';')
 
-df_awards = pd.read_csv('data/cleaned/awards_players.csv', delimiter=';')
+# split the dataset into train and test
 
-df_coaches = pd.read_csv('data/cleaned/coaches.csv', delimiter=';') 
+train = df[((df['year'] < 8) & (df['year'] > 1))]
 
-df_players = pd.read_csv('data/cleaned/players_cleaned.csv', delimiter=';')
+test = df[df['year'] >= 7]
 
-df_players_teams = pd.read_csv('data/cleaned/players_teams_cleaned.csv', delimiter=';')
+# split into features and labels
 
-series_post = pd.read_csv('data/cleaned/series_post_cleaned.csv', delimiter=';')
+train_features = train.drop(['playoff'], axis=1)
 
-df_teams = pd.read_csv('data/cleaned/teams_merged.csv')
+train_label = train['playoff']
 
-# Rename ID variables to match the other datasets
+test_features = test.drop(['playoff'], axis=1)
 
-df_players.rename(columns={'bioID': 'personID'}, inplace=True)
+test_label = test['playoff']
 
-df_coaches.rename(columns={'coachID': 'personID'}, inplace=True)
+# create the model
 
-df_players_teams.rename(columns={'playerID': 'personID'}, inplace=True)
+model = DecisionTreeClassifier()
 
-df_awards.rename(columns={'playerID': 'personID'}, inplace=True)
+# train the model
 
+model.fit(train_features, train_label)
 
-# merge all the datsets
+# predict the test data
 
-df1 = df_players.merge(df_awards, how='left', on=['personID'])
+predictions = model.predict(test_features)
 
-# Set 0 for year, in order to remove NaN
+# calculate the accuracy
 
-df1['year'] = df1['year'].fillna(0)
+accuracy = np.mean(predictions == test_label)
 
-df1 = df1.merge(df_players_teams, how='left', on=['personID'])
-
-#print(df1.head())
-
-df2 = df_coaches.merge(df_awards, how='left', on=['personID', 'year'])
-
-#print(df2.head())
-
-df3 = pd.concat([df1, df2])
-df3['year'] = df3['year'].fillna(0)
-
-print(df3.head())
-
-# # write to a new csv
-
-df3.to_csv('data/cleaned/merged_dataset_cleaned.csv', index=False)
+print(f"The accuracy of the model is: {accuracy}.")
