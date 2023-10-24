@@ -238,7 +238,6 @@ Machine Learning Project
 - We thought that one way of integrating this information about players and coaches who have won awards into the corresponding tables would be to add a column to the player and coach tables with Boolean values to inform whether or not a player or coach has won an award. This data is useful in the sense that an award-winning player or coach brings a lot of value to the team and therefore increases the likelihood of leading it to victory.
 - From our analysis, there are no correlated attributes either, so it wasn't necessary to eliminate any more columns.
 
-
 ### Data Preparation
 
 #### Data Cleaning
@@ -254,12 +253,28 @@ Machine Learning Project
     - teams
     - ...
 
+### Feature extraction (feature selection)
 
-
-
-#### Feature extraction (feature selection)
+#### categorical variables
 
 - In this part, we were selecting the variables we want to consider in our models. We did some scripts in Python and used RapidMiner to build the correlation matrixes of the attributes of each relation, so we could see which ones were more correlated with each other and the target value.
 
-![Matrix correlation teams](./images/matrix_correlation_teams_reduced.png)
+![Matrix correlation teams](./images/matrix_correlation_reduced.png)
 
+- Since we it couldn't extract any conclusions from the matrix, we decided to make it one for each group of variables, so we could see which ones were more correlated with each other and the target value.
+ 
+- Here's the correlation matrix for the categorical variables:
+
+![Correlation matrix categorical](./images/correlation_matrix_categorical.png)
+
+![Chi-squared correlation matrix categorical](./images/chi_squared_correlation_categoricals.png)
+
+- As we can see, this variables are not correlated with each other, neither with the target variable, so we don't keep it.
+
+- Other aspect that we could see that the year is not correlated with the target, which could indicate that the teams maintained balanced over the years.
+
+- We also did a chi-squared correlation matrix, to see if there was any correlation between the categorical variables with the ordinal ones (in this case, the team's rank for each year):
+
+![Correlation categoricals with Ordinals](./images/correlation_categorical_ordinal.png)
+
+- The teamID and the year are the ones who correlate the most with the rank as expected.
