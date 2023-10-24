@@ -5,7 +5,7 @@ from scipy import stats
 data = pd.read_csv("../../final_dataset.csv", sep=";")
 
 continuous_attributes = ["playerScore", "postPlayerScore", "threeAccuracy", "postThreeAccuracy", "height", "weight", "won", "W", "teams_score"]
-nominal_attribute = data["rank"]
+nominal_attributes = ["pos", "award", "playoff", "firstRound", "semis", "finals"]
 
 for nominal_attribute in nominal_attributes:
     print("Nominal attribute:", nominal_attribute)
