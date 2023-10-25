@@ -255,12 +255,11 @@ Machine Learning Project
 
 ### Feature extraction (feature selection)
 
-#### categorical variables
-
 - In this part, we were selecting the variables we want to consider in our models. We did some scripts in Python and used RapidMiner to build the correlation matrixes of the attributes of each relation, so we could see which ones were more correlated with each other and the target value.
 
 ![Matrix correlation teams](./images/matrix_correlation_reduced.png)
 
+#### categorical variables
 - Since we it couldn't extract any conclusions from the matrix, we decided to make it one for each group of variables, so we could see which ones were more correlated with each other and the target value.
  
 - Here's the correlation matrix for the categorical variables:
@@ -278,3 +277,7 @@ Machine Learning Project
 ![Correlation categoricals with Ordinals](./images/correlation_categorical_ordinal.png)
 
 - The teamID and the year are the ones who correlate the most with the rank as expected.
+
+- Finally, we did the correlation matrix for the categorical variables with the numerical ones:
+
+
