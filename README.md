@@ -243,7 +243,6 @@ Machine Learning Project
 - We thought that one way of integrating this information about players and coaches who have won awards into the corresponding tables would be to add a column to the player and coach tables with Boolean values to inform whether or not a player or coach has won an award. This data is useful in the sense that an award-winning player or coach brings a lot of value to the team and therefore increases the likelihood of leading it to victory.
 - From our analysis, there are no correlated attributes either, so it wasn't necessary to eliminate any more columns. However it is not possible to show the correlation matrix because the number os attributes is not enough.
 
-
 ### Data Preparation
 
 #### Data Cleaning
@@ -255,12 +254,45 @@ Machine Learning Project
     - checking for undefined values and/or outliers and normalize/replace them
     - eliminating rows that were not used or related to any other table, as they had all the values missing
 
-
-
-
-#### Feature extraction (feature selection)
+### Feature extraction (feature selection)
 
 - In this part, we were selecting the variables we want to consider in our models. We did some scripts in Python and used RapidMiner to build the correlation matrixes of the attributes of each relation, so we could see which ones were more correlated with each other and the target value.
 
-![Matrix correlation teams](./images/matrix_correlation_teams_reduced.png)
+![Matrix correlation teams](./images/matrix_correlation_reduced.png)
 
+#### Categorical variables
+- Since we it couldn't extract any conclusions from the matrix, we decided to make it one for each group of variables, so we could see which ones were more correlated with each other and the target value.
+ 
+- Here's the correlation matrix for the categorical variables:
+
+![Correlation matrix categorical](./images/correlation_matrix_categorical.png)
+
+![Chi-squared correlation matrix categorical](./images/chi_squared_correlation_categoricals.png)
+
+- As we can see, this variables are not correlated with each other, neither with the target variable, so we don't keep it.
+
+- Other aspect that we could see that the year is not correlated with the target, which could indicate that the teams maintained balanced over the years.
+
+- We also did a chi-squared correlation matrix, to see if there was any correlation between the categorical variables with the ordinal ones (in this case, the team's rank for each year):
+
+![Correlation categoricals with Ordinals](./images/correlation_categorical_ordinal.png)
+
+- The teamID and the year are the ones who correlate the most with the rank as expected.
+
+- Finally, we did some heatmaps for the categorical variables and its normalization with the their distributions with the numerical ones:
+
+![H-statistic heatmap for categorical with numerical](./images/h_stat_heatmap_categoricals.png)
+
+![P-Values heatmap for categorical with numerical](./images/p_values_categoricals.png)
+
+-  Since the values of the H-statistic are very low for all categorical variables except the height of the players and the number of victories in the season, this means that those distributions differ a lot from the numerical variables. Also, the p-values are 0 (lower than the chosen significance value, 0.05), which means that are significant differences in the distribuitions of the 2 groups of variables.
+
+- Besides that, we also did the correlation matrix between the categorical variables and the numerical ones:
+
+![Correlation matrix categorical with numerical](./images/correlation_matrix_categorical_numerical.png)
+
+- We concluded that the position and the award variables are highly correlated with the player and post player score, as well as the weight and height of the player, which makes sense, since the players adapt their game to their cahractheristics, and the better the physical attributes, the better the player will be and have more impact.
+
+#### Conclusions
+
+- With the information retireved with these graphics and matrixes, we decided to keep just decided to keep the teamID and the playoffs variables, since they are the essential ones to make the prediction. Also, we just might need to create a boolean / binomial variable to indicate if the a player/coach has an award or not.
