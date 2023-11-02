@@ -257,10 +257,22 @@ Machine Learning Project
 
 - In this part, we were selecting the variables we want to consider in our models. We did some scripts in Python and used RapidMiner to build the correlation matrixes of the attributes of each relation, so we could see which ones were more correlated with each other and the target value.
 
+- We also did some heatmaps for the categorical variables and its normalization with the their distributions with the numerical ones, using the Eta-squared statistic.
+
 ![Matrix correlation teams](./images/matrix_correlation_reduced.png)
 
-#### Categorical variables
+
 - Since we it couldn't extract any conclusions from the matrix, we decided to make it one for each group of variables, so we could see which ones were more correlated with each other and the target value.
+
+- Besides that, we create a group of variables in order to replace others:
+
+    * Win_ratio for the number of wins and losses;
+    * Bmi for the weight and height of the players;
+    * teams_score and players_score to estimate the impact and performance through the seasons of the teams and players, replacing the respective offensive and defensive statistics;
+    * Awards turned into a boolean variable which indicates whether a coach or player has won an award or not.
+
+#### Categorical variables
+
  
 - Here's the correlation matrix for the categorical variables:
 
@@ -274,24 +286,24 @@ Machine Learning Project
 
 - We also did a chi-squared correlation matrix, to see if there was any correlation between the categorical variables with the ordinal ones (in this case, the team's rank for each year):
 
-![Correlation categoricals with Ordinals](./images/correlation_categorical_ordinal.png)
+- After that, we did some heatmaps for the categorical variables and its normalization with the their distributions with the numerical ones, using the Eta-squared statistic:
 
-- The teamID and the year are the ones who correlate the most with the rank as expected.
+![Eta squared values](./images/correlation_matrix_categorical_numerical.png)
 
-- Finally, we did some heatmaps for the categorical variables and its normalization with the their distributions with the numerical ones:
-
-![H-statistic heatmap for categorical with numerical](./images/h_stat_heatmap_categoricals.png)
-
-![P-Values heatmap for categorical with numerical](./images/p_values_categoricals.png)
-
--  Since the values of the H-statistic are very low for all categorical variables except the height of the players and the number of victories in the season, this means that those distributions differ a lot from the numerical variables. Also, the p-values are 0 (lower than the chosen significance value, 0.05), which means that are significant differences in the distribuitions of the 2 groups of variables.
+-  Since the values of the H-statistic are very low for all categorical variables except the awards and the position of the players, this means that those distributions differ a lot from the numerical variables.
 
 - Besides that, we also did the correlation matrix between the categorical variables and the numerical ones:
 
-![Correlation matrix categorical with numerical](./images/correlation_matrix_categorical_numerical.png)
+![Correlation matrix between categoricals and numericals](./images/correlation_matrix_categoricals_numericals.png)
 
-- We concluded that the position and the award variables are highly correlated with the player and post player score, as well as the weight and height of the player, which makes sense, since the players adapt their game to their cahractheristics, and the better the physical attributes, the better the player will be and have more impact.
+- We could concluded that only the winRation and the postWin Ratio have a significant direct correlation, which makes sense (the more wins, the higher the chances to get in the playoff).
+
+- Finally we also measured the correlation between the categorical variables and the ordinal one (rank):
+
+![Correlation matrix categorical with ordinal](./images/correlation_matrix_categoricals_ordinal.png)
+
+- As we can see, the values are negative, which means it has a reversed correlation. In other words, the higher the playoff the lower the rank. Also there is a very weak correlation between the awards and the finals with rank, and we have no explanation of why that happened.
 
 #### Conclusions
 
-- With the information retireved with these graphics and matrixes, we decided to keep just decided to keep the teamID and the playoffs variables, since they are the essential ones to make the prediction. Also, we just might need to create a boolean / binomial variable to indicate if the a player/coach has an award or not.
+- With the information retireved with these graphics and matrixes, we decided to keep just decided to keep all the variables except from the position and the awards.
