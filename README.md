@@ -248,6 +248,7 @@ Machine Learning Project
     - eliminate duplicates
     - checking for undefined values and/or outliers
     - eliminating rows that were not used or related to any other table, as they had all the values missing
+    
 - The datasets that required the treatment described above were:
     - players
     - teams

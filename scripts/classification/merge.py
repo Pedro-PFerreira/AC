@@ -14,7 +14,7 @@ def merge():
 
     # Retrieve the merged the data
 
-    df = pd.read_csv('final_dataset.csv', delimiter=';')
+    df = pd.read_csv('new_final_dataset.csv', delimiter=';')
 
     # Replace tmID for an number, in order to be 
     # used in the classification model
