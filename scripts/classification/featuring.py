@@ -37,3 +37,17 @@ predictions = model.predict(test_features)
 accuracy = np.mean(predictions == test_label)
 
 print(f"The accuracy of the model is: {accuracy}.")
+
+# calculate the precision
+
+precision = np.mean(predictions[predictions == 1] == test_label[predictions == 1])
+
+print(f"The precision of the model is: {precision}.")
+
+# calculate the f-measure
+
+recall = np.mean(predictions[predictions == 1] == test_label[predictions == 1])
+
+f_measure = 2 * (precision * recall) / (precision + recall)
+
+print(f"The f-measure of the model is: {f_measure}.")
