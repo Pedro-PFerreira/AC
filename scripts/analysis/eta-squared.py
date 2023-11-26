@@ -4,10 +4,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Sample data loading
-data = pd.read_csv("../../final_dataset_before.csv", sep=";")
+data = pd.read_csv("../../new_final_dataset.csv", sep=";")
 
-continuous_attributes = ["playerScore", "postPlayerScore", "threeAccuracy", "postThreeAccuracy", "height", "weight", "won", "W", "teams_score"]
-nominal_attributes = ["pos", "award", "playoff", "firstRound", "semis", "finals"]
+continuous_attributes = ["playerScore", "postPlayerScore", "threeAccuracy", "postThreeAccuracy", "bmi", "winRatio", "postWinRatio", "teams_score"]
+nominal_attributes = ["pos", "awards", "playoff", "firstRound", "semis", "finals"]
 
 # Function to compute eta squared
 def eta_squared(nominal_col, continuous_col):

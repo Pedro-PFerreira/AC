@@ -5,23 +5,31 @@ import matplotlib.pyplot as plt
 from scipy import stats
 
 # Sample data loading
-data = pd.read_csv("../../final_dataset.csv", sep=";")
+data = pd.read_csv("../../new_final_dataset.csv", sep=";")
 
-continuous_attributes = ["playerScore", "postPlayerScore", "threeAccuracy", "postThreeAccuracy", "height", "weight", "won", "W", "teams_score"]
-nominal_attributes = ["pos", "award", "playoff", "firstRound", "semis", "finals"]
+# continuous_attributes = ["winRatio", "teams_score"]
+ordinal_attributes = ["rank"]
+nominal_attributes = ["pos", "awards", "playoff", "firstRound", "semis", "finals"]
+
+# Create dummy variables for nominal attributes
+dummy_vars = pd.get_dummies(data[nominal_attributes], drop_first=True)
+
+
+# Combine the dummy variables with the continuous attributes
+# data_with_dummies = pd.concat([data[continuous_attributes], dummy_vars], axis=1)
+data_with_dummies = pd.concat([data[ordinal_attributes], dummy_vars], axis=1)
 
 # Dictionary to hold results
 results = {}
 
-for nominal_attribute in nominal_attributes:
-    results[nominal_attribute] = {}
-    for attribute in continuous_attributes:
-        groups = [data[attribute][data[nominal_attribute] == category] for category in np.unique(data[nominal_attribute])]
-        
-        h_statistic, p_value = stats.kruskal(*groups)
-        
-        results[nominal_attribute][attribute + '_H'] = h_statistic
-        results[nominal_attribute][attribute + '_P'] = p_value
+for dummy_attribute in dummy_vars.columns:
+    results[dummy_attribute] = {}
+    # for attribute in continuous_attributes:
+    for attribute in ordinal_attributes:
+        h_statistic, p_value = stats.kruskal(data_with_dummies[attribute][data_with_dummies[dummy_attribute] == 1],
+                                             data_with_dummies[attribute][data_with_dummies[dummy_attribute] == 0])
+        results[dummy_attribute][attribute + '_H'] = h_statistic
+        results[dummy_attribute][attribute + '_P'] = p_value
 
 # Convert the results dictionary to a DataFrame
 df_results = pd.DataFrame.from_dict(results, orient='index')
@@ -53,4 +61,4 @@ plt.show()
 plt.figure(figsize=(12, 6))
 sns.heatmap(p_values, annot=True, cmap='viridis_r', cbar_kws={'label': 'P-value'}, vmin=0, vmax=1, fmt=".5f")
 plt.title("P-values from Kruskal-Wallis test")
-plt.show()  
+plt.show()

@@ -8,7 +8,18 @@
 
 ## Teams + Teams_Post
 
-- New attr winRatio = (homeW + awayW) / GP
-- Removed homeW, awayW, GP
-- Losses can be derived from winRatio, so removed homeL, awayL
-- firstRound removed (all zeros)
+- Removed homeW, awayW (sum = won) and homeL awayL (sum = lost)
+- New attr winRatio = (won + confW) / (GP + confW + confL)
+- Removed won, GP, confW, confL
+- Losses can be derived from winRatio, so removed lost
+- semis, finals and firstRound transformed into booleans
+
+## Coaches
+
+- New attr coachWinRatio = won / (won + lost) and postCoachWinRatio = post_wins / (post_wins + post_losses)
+- Removed won, lost, post_wins, post_losses
+
+# Awards
+
+- 
+

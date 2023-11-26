@@ -2,10 +2,10 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("../../final_dataset_before.csv", sep=";")
+data = pd.read_csv("new_final_dataset.csv", sep=";")
 
-continuous_attributes = ["playerScore", "postPlayerScore", "threeAccuracy", "postThreeAccuracy", "height", "weight", "won", "W", "teams_score"]
-nominal_attributes = ["pos", "award", "playoff", "firstRound", "semis", "finals"]
+continuous_attributes = ["playerScore", "postPlayerScore", "threeAccuracy", "postThreeAccuracy", "bmi", "winRatio", "awards","postWinRatio", "teams_score"]
+nominal_attributes = ["playoff"]
 
 for nominal in nominal_attributes:
     for continuous in continuous_attributes:
