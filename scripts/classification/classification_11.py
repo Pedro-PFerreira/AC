@@ -17,19 +17,28 @@ replace_values(df, 'tmID')
 # replace bioID for a number, in order to be used in the classification model
 replace_values(df, 'bioID')
 
-# drop the columns that are not needed
-df = df.drop(['rank', 'pos', 'dq', 'PostDQ'], axis=1)
+replace_values(df, 'confID')
+
+# store the teamID and the team name in a dictionary
+teamID_to_name = df[['tmID', 'name']].drop_duplicates().set_index('tmID').to_dict()['name']
+
+df = df.drop(['name'], axis=1)
 
 # replace missing values with the mean
 df = df.fillna(df.mean())
 
-# Create a list to store the accuracy for each year
-accuracies = []
+# Shift the target to the previous year
+
+df['playoff'].shift(-1)
 
 # Define the sliding window size (e.g., 1 year)
-window_size = 1
+window_size = 2
+accuracies = []
 
-for year in range(2, 10):
+# Create the model
+model = DecisionTreeClassifier()
+
+for year in range(2, 11):
     # Select the data for the current year
     current_year_data = df[df['year'] == year]
     
@@ -41,9 +50,6 @@ for year in range(2, 10):
     train_label = training_data['playoff']
     test_features = current_year_data.drop(['playoff'], axis=1)
     test_label = current_year_data['playoff']
-    
-    # Create the model
-    model = DecisionTreeClassifier()
     
     # Train the model
     model.fit(train_features, train_label)
@@ -68,14 +74,18 @@ for year in range(2, 10):
 
     print(f"The F-measure for year {year} is: {f_measure}")
 
-# Calculate the overall accuracy across all years
-overall_accuracy = np.mean(accuracies)
-print(f"The overall accuracy of the model is: {overall_accuracy}")
+# Retrive the name of the teams that go to the playoffs in the last year
 
-# Calculate the overall precision across all years
-overall_precision = np.mean(precision)
-print(f"The overall precision of the model is: {overall_precision}")
+playoff_teams = df[df['year'] == 10][df['playoff'] == 1]['tmID'].values
 
-# Calculate the overall F-measure across all years
-overall_f_measure = 2 * (overall_precision * overall_accuracy) / (overall_precision + overall_accuracy)
-print(f"The overall F-measure of the model is: {overall_f_measure}")
+print(playoff_teams)
+
+# Convert the Ids to the team names
+
+playoff_teams = [teamID_to_name[team] for team in playoff_teams]
+
+# Remove duplicate names
+
+playoff_teams = list(set(playoff_teams))
+
+print(playoff_teams)
