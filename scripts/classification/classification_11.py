@@ -1,10 +1,28 @@
 import pandas as pd
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
-from sklearn import tree
-import matplotlib.pyplot as plt
+from sklearn.ensemble import RandomForestClassifier
 
-df = pd.read_csv('new_final_dataset.csv', delimiter=';')
+df = pd.read_csv('new_final_dataset_11.csv', delimiter=';')
+
+columns_to_update = ['playerScore', 'postPlayerScore', 'playerID', 'threeAccuracy', 'postThreeAccuracy', 'bmi']
+
+for year in range(11, 1, -1):
+    year_data = df[df['year'] == year]
+    prev_year_data = df[df['year'] == year - 1]
+
+    # Loop through all rows of the year
+    for index, row in year_data.iterrows():
+        player = row['playerID']
+
+        if not prev_year_data[prev_year_data['playerID'] == player].empty:
+            # Replace selected columns for the current year with the values from the previous year
+            for column in columns_to_update:
+                df.loc[(df['year'] == year) & (df['playerID'] == player), column] = prev_year_data[prev_year_data['playerID'] == player][column].values[0]
+        else:
+            # If the player is not found in the previous year, replace selected columns with NaN
+            for column in columns_to_update:
+                df.loc[(df['year'] == year) & (df['playerID'] == player), column] = np.nan
 
 def replace_values(df, column):
     unique_values = df[column].unique()
@@ -14,31 +32,36 @@ def replace_values(df, column):
 # replace tmID for a number, in order to be used in the classification model
 replace_values(df, 'tmID')
 
-# replace bioID for a number, in order to be used in the classification model
-replace_values(df, 'bioID')
+# replace playerID for a number, in order to be used in the classification model
+replace_values(df, 'playerID')
 
 replace_values(df, 'confID')
+
+replace_values(df, 'coachID')
 
 # store the teamID and the team name in a dictionary
 teamID_to_name = df[['tmID', 'name']].drop_duplicates().set_index('tmID').to_dict()['name']
 
-df = df.drop(['name'], axis=1)
+df = df.drop(['name', 'stint'], axis=1)
+
+# convert playoff, firstRound, semis and finals to boolean
+
+df['playoff'] = df['playoff'].astype('bool')
+df['firstRound'] = df['firstRound'].astype('bool')
+df['semis'] = df['semis'].astype('bool')
+df['finals'] = df['finals'].astype('bool')
 
 # replace missing values with the mean
 df = df.fillna(df.mean())
 
-# Shift the target to the previous year
-
-df['playoff'].shift(-1)
-
 # Define the sliding window size (e.g., 1 year)
-window_size = 2
+window_size = 1
 accuracies = []
 
 # Create the model
 model = DecisionTreeClassifier()
-
-for year in range(2, 11):
+   
+for year in range(2, 12):
     # Select the data for the current year
     current_year_data = df[df['year'] == year]
     
@@ -51,10 +74,8 @@ for year in range(2, 11):
     test_features = current_year_data.drop(['playoff'], axis=1)
     test_label = current_year_data['playoff']
     
-    # Train the model
     model.fit(train_features, train_label)
     
-    # Predict the test data
     predictions = model.predict(test_features)
     
     # Calculate the accuracy for the current year
@@ -76,7 +97,7 @@ for year in range(2, 11):
 
 # Retrive the name of the teams that go to the playoffs in the last year
 
-playoff_teams = df[df['year'] == 10][df['playoff'] == 1]['tmID'].values
+playoff_teams = df[df['year'] == 11][df['playoff'] == 1]['tmID'].values
 
 print(playoff_teams)
 
