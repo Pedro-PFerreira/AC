@@ -1,0 +1,143 @@
+"year";"tmID";"confID";"name";"rank";"playoff";"firstRound";"semis";"finals";"teams_score";"winRatio";"postWinRatio"
+9;"ATL";"EA";"Atlanta Dream";7;"false";"false";"false";"false";2468.7000000000003;0.1111111111111111;
+10;"ATL";"EA";"Atlanta Dream";2;"true";"false";"false";"false";3007.8999999999996;0.5;0.0
+1;"CHA";"EA";"Charlotte Sting";8;"false";"false";"false";"false";2243.0;0.24528301886792453;
+2;"CHA";"EA";"Charlotte Sting";4;"true";"true";"true";"false";2153.3;0.6226415094339622;0.5
+3;"CHA";"EA";"Charlotte Sting";2;"true";"false";"false";"false";2312.5999999999995;0.5660377358490566;0.0
+4;"CHA";"EA";"Charlotte Sting";2;"true";"false";"false";"false";2340.2;0.5172413793103449;0.0
+5;"CHA";"EA";"Charlotte Sting";5;"false";"false";"false";"false";2035.2000000000003;0.4444444444444444;
+6;"CHA";"EA";"Charlotte Sting";6;"false";"false";"false";"false";2094.6;0.18518518518518517;
+7;"CHA";"EA";"Charlotte Sting";6;"false";"false";"false";"false";2439.5;0.3148148148148148;
+7;"CHI";"EA";"Chicago Sky";7;"false";"false";"false";"false";2418.7000000000003;0.16666666666666666;
+8;"CHI";"EA";"Chicago Sky";6;"false";"false";"false";"false";2673.0000000000005;0.37037037037037035;
+9;"CHI";"EA";"Chicago Sky";5;"false";"false";"false";"false";2497.3;0.4074074074074074;
+10;"CHI";"EA";"Chicago Sky";5;"false";"false";"false";"false";2644.5;0.4642857142857143;
+1;"CLE";"EA";"Cleveland Rockers";2;"true";"true";"false";"false";2286.2;0.5660377358490566;0.5
+2;"CLE";"EA";"Cleveland Rockers";1;"true";"false";"false";"false";2219.899999999999;0.6981132075471698;0.3333333333333333
+3;"CLE";"EA";"Cleveland Rockers";7;"false";"false";"false";"false";2170.9999999999995;0.32075471698113206;
+4;"CLE";"EA";"Cleveland Rockers";4;"true";"false";"false";"false";2308.8;0.5172413793103449;0.3333333333333333
+4;"CON";"EA";"Connecticut Sun";3;"true";"true";"false";"false";2556.1;0.5;0.5
+5;"CON";"EA";"Connecticut Sun";1;"true";"true";"true";"false";2591.6;0.5925925925925926;0.625
+6;"CON";"EA";"Connecticut Sun";1;"true";"true";"true";"true";2636.9;0.7222222222222222;0.625
+7;"CON";"EA";"Connecticut Sun";1;"true";"true";"false";"false";2967.4;0.7592592592592593;0.6
+8;"CON";"EA";"Connecticut Sun";3;"true";"false";"false";"false";2962.1999999999994;0.5185185185185185;0.3333333333333333
+9;"CON";"EA";"Connecticut Sun";2;"true";"false";"false";"false";2831.5000000000005;0.6296296296296297;0.3333333333333333
+10;"CON";"EA";"Connecticut Sun";6;"false";"false";"false";"false";2883.7999999999997;0.4642857142857143;
+1;"DET";"EA";"Detroit Shock";5;"false";"false";"false";"false";2321.1999999999994;0.4528301886792453;
+2;"DET";"EA";"Detroit Shock";7;"false";"false";"false";"false";2177.1;0.32075471698113206;
+3;"DET";"EA";"Detroit Shock";8;"false";"false";"false";"false";2096.5;0.2830188679245283;
+4;"DET";"EA";"Detroit Shock";1;"true";"true";"true";"true";2477.3;0.7413793103448276;0.75
+5;"DET";"EA";"Detroit Shock";3;"true";"false";"false";"false";2466.9999999999995;0.5185185185185185;0.3333333333333333
+6;"DET";"EA";"Detroit Shock";4;"true";"false";"false";"false";2149.4999999999995;0.5;0.0
+7;"DET";"EA";"Detroit Shock";2;"true";"true";"true";"true";2589.1000000000004;0.6851851851851852;0.7
+8;"DET";"EA";"Detroit Shock";1;"true";"true";"true";"false";2698.5;0.7037037037037037;0.5454545454545454
+9;"DET";"EA";"Detroit Shock";1;"true";"true";"true";"true";2868.4000000000005;0.7037037037037037;0.7777777777777778
+10;"DET";"EA";"Detroit Shock";3;"true";"true";"false";"false";2718.5;0.5178571428571429;0.6
+1;"HOU";"WE";"Houston Comets";2;"true";"true";"true";"true";2656.400000000001;0.8301886792452831;1.0
+2;"HOU";"WE";"Houston Comets";4;"true";"false";"false";"false";2243.0000000000005;0.6037735849056604;0.0
+3;"HOU";"WE";"Houston Comets";2;"true";"false";"false";"false";2232.0999999999995;0.7547169811320755;0.3333333333333333
+4;"HOU";"WE";"Houston Comets";2;"true";"false";"false";"false";2371.2;0.5862068965517241;0.3333333333333333
+5;"HOU";"WE";"Houston Comets";6;"false";"false";"false";"false";2240.5;0.35714285714285715;
+6;"HOU";"WE";"Houston Comets";3;"true";"true";"false";"false";2369.8;0.5357142857142857;0.4
+7;"HOU";"WE";"Houston Comets";3;"true";"false";"false";"false";2498.6;0.5370370370370371;0.0
+8;"HOU";"WE";"Houston Comets";5;"false";"false";"false";"false";2539.4;0.4107142857142857;
+9;"HOU";"WE";"Houston Comets";5;"false";"false";"false";"false";2599.8;0.5;
+1;"IND";"EA";"Indiana Fever";7;"false";"false";"false";"false";2296.7999999999997;0.3018867924528302;
+2;"IND";"EA";"Indiana Fever";6;"false";"false";"false";"false";2196.7000000000003;0.32075471698113206;
+3;"IND";"EA";"Indiana Fever";4;"true";"false";"false";"false";2237.7000000000003;0.5283018867924528;0.3333333333333333
+4;"IND";"EA";"Indiana Fever";5;"false";"false";"false";"false";2586.7;0.4827586206896552;
+5;"IND";"EA";"Indiana Fever";6;"false";"false";"false";"false";2454.1000000000004;0.42592592592592593;
+6;"IND";"EA";"Indiana Fever";2;"true";"true";"false";"false";2354.3;0.6481481481481481;0.5
+7;"IND";"EA";"Indiana Fever";3;"true";"false";"false";"false";2586.2;0.6111111111111112;0.0
+8;"IND";"EA";"Indiana Fever";2;"true";"true";"false";"false";2609.7999999999997;0.6111111111111112;0.5
+9;"IND";"EA";"Indiana Fever";4;"true";"false";"false";"false";2562.5;0.5370370370370371;0.3333333333333333
+10;"IND";"EA";"Indiana Fever";1;"true";"true";"true";"false";2744.6000000000004;0.6964285714285714;0.6
+1;"LAS";"WE";"Los Angeles Sparks";1;"true";"true";"false";"false";2567.5;0.8490566037735849;0.5
+2;"LAS";"WE";"Los Angeles Sparks";1;"true";"true";"true";"true";2794.0;0.8867924528301887;0.8571428571428571
+3;"LAS";"WE";"Los Angeles Sparks";1;"true";"true";"true";"true";2613.5;0.7924528301886793;1.0
+4;"LAS";"WE";"Los Angeles Sparks";1;"true";"true";"true";"false";2684.3999999999996;0.7068965517241379;0.5555555555555556
+5;"LAS";"WE";"Los Angeles Sparks";1;"true";"false";"false";"false";2568.7999999999993;0.7321428571428571;0.3333333333333333
+6;"LAS";"WE";"Los Angeles Sparks";4;"true";"false";"false";"false";2443.6999999999994;0.5178571428571429;0.0
+7;"LAS";"WE";"Los Angeles Sparks";1;"true";"true";"false";"false";2734.9000000000005;0.7407407407407407;0.4
+8;"LAS";"WE";"Los Angeles Sparks";7;"false";"false";"false";"false";2616.4;0.2857142857142857;
+9;"LAS";"WE";"Los Angeles Sparks";3;"true";"true";"false";"false";2730.6;0.5925925925925926;0.5
+10;"LAS";"WE";"Los Angeles Sparks";3;"true";"true";"false";"false";2799.1;0.5370370370370371;0.5
+1;"MIA";"EA";"Miami Sol";6;"false";"false";"false";"false";1722.5;0.41509433962264153;
+2;"MIA";"EA";"Miami Sol";3;"true";"false";"false";"false";2222.2999999999997;0.6415094339622641;0.3333333333333333
+3;"MIA";"EA";"Miami Sol";6;"false";"false";"false";"false";2199.5;0.49056603773584906;
+1;"MIN";"WE";"Minnesota Lynx";6;"false";"false";"false";"false";2142.0;0.37735849056603776;
+2;"MIN";"WE";"Minnesota Lynx";6;"false";"false";"false";"false";1897.1;0.39622641509433965;
+3;"MIN";"WE";"Minnesota Lynx";8;"false";"false";"false";"false";1968.0;0.3018867924528302;
+4;"MIN";"WE";"Minnesota Lynx";4;"true";"false";"false";"false";2491.7;0.5517241379310345;0.3333333333333333
+5;"MIN";"WE";"Minnesota Lynx";3;"true";"false";"false";"false";2126.9;0.5357142857142857;0.0
+6;"MIN";"WE";"Minnesota Lynx";6;"false";"false";"false";"false";2288.1000000000004;0.4107142857142857;
+7;"MIN";"WE";"Minnesota Lynx";7;"false";"false";"false";"false";2510.1;0.2962962962962963;
+8;"MIN";"WE";"Minnesota Lynx";6;"false";"false";"false";"false";2767.9000000000005;0.32142857142857145;
+9;"MIN";"WE";"Minnesota Lynx";7;"false";"false";"false";"false";2845.0;0.4444444444444444;
+10;"MIN";"WE";"Minnesota Lynx";5;"false";"false";"false";"false";2786.1;0.3888888888888889;
+1;"NYL";"EA";"New York Liberty";1;"true";"true";"true";"false";2231.2000000000003;0.6415094339622641;0.5714285714285714
+2;"NYL";"EA";"New York Liberty";2;"true";"true";"false";"false";2360.7;0.6415094339622641;0.5
+3;"NYL";"EA";"New York Liberty";1;"true";"true";"true";"false";2159.1000000000004;0.5471698113207547;0.5
+4;"NYL";"EA";"New York Liberty";6;"false";"false";"false";"false";2433.7999999999997;0.46551724137931033;
+5;"NYL";"EA";"New York Liberty";2;"true";"true";"false";"false";2350.0;0.5185185185185185;0.4
+6;"NYL";"EA";"New York Liberty";3;"true";"false";"false";"false";2396.6;0.5;0.0
+7;"NYL";"EA";"New York Liberty";5;"false";"false";"false";"false";2292.9000000000005;0.3333333333333333;
+8;"NYL";"EA";"New York Liberty";4;"true";"false";"false";"false";2438.1000000000004;0.48148148148148145;0.3333333333333333
+9;"NYL";"EA";"New York Liberty";3;"true";"true";"false";"false";2691.1000000000004;0.5555555555555556;0.5
+10;"NYL";"EA";"New York Liberty";7;"false";"false";"false";"false";2626.0999999999995;0.39285714285714285;
+1;"ORL";"EA";"Orlando Miracle";3;"true";"false";"false";"false";2376.3;0.5471698113207547;0.3333333333333333
+2;"ORL";"EA";"Orlando Miracle";5;"false";"false";"false";"false";2264.2000000000003;0.41509433962264153;
+3;"ORL";"EA";"Orlando Miracle";5;"false";"false";"false";"false";2346.5;0.5471698113207547;
+1;"PHO";"WE";"Phoenix Mercury";4;"true";"false";"false";"false";2310.5;0.5849056603773585;0.0
+2;"PHO";"WE";"Phoenix Mercury";5;"false";"false";"false";"false";2176.1;0.39622641509433965;
+3;"PHO";"WE";"Phoenix Mercury";7;"false";"false";"false";"false";2151.9;0.33962264150943394;
+4;"PHO";"WE";"Phoenix Mercury";7;"false";"false";"false";"false";2280.2;0.22413793103448276;
+5;"PHO";"WE";"Phoenix Mercury";5;"false";"false";"false";"false";2384.4;0.5;
+6;"PHO";"WE";"Phoenix Mercury";5;"false";"false";"false";"false";2440.3;0.5;
+7;"PHO";"WE";"Phoenix Mercury";5;"false";"false";"false";"false";3261.5;0.48148148148148145;
+8;"PHO";"WE";"Phoenix Mercury";1;"true";"true";"true";"true";3271.4;0.7142857142857143;0.7777777777777778
+9;"PHO";"WE";"Phoenix Mercury";6;"false";"false";"false";"false";3145.7;0.4444444444444444;
+10;"PHO";"WE";"Phoenix Mercury";1;"true";"true";"true";"true";3314.3999999999996;0.6666666666666666;0.6363636363636364
+1;"POR";"WE";"Portland Fire";7;"false";"false";"false";"false";1965.6;0.2641509433962264;
+2;"POR";"WE";"Portland Fire";7;"false";"false";"false";"false";2068.7;0.3018867924528302;
+3;"POR";"WE";"Portland Fire";5;"false";"false";"false";"false";2302.4000000000005;0.4528301886792453;
+1;"SAC";"WE";"Sacramento Monarchs";3;"true";"false";"false";"false";2698.4;0.6415094339622641;0.0
+2;"SAC";"WE";"Sacramento Monarchs";2;"true";"true";"false";"false";2553.8;0.6226415094339622;0.6
+3;"SAC";"WE";"Sacramento Monarchs";6;"false";"false";"false";"false";2205.6000000000004;0.41509433962264153;
+4;"SAC";"WE";"Sacramento Monarchs";3;"true";"true";"false";"false";2536.8;0.5517241379310345;0.5
+5;"SAC";"WE";"Sacramento Monarchs";4;"true";"true";"false";"false";2578.7;0.5357142857142857;0.5
+6;"SAC";"WE";"Sacramento Monarchs";1;"true";"true";"true";"true";2418.6;0.75;0.875
+7;"SAC";"WE";"Sacramento Monarchs";2;"true";"true";"true";"false";2662.2000000000003;0.5740740740740741;0.6666666666666666
+8;"SAC";"WE";"Sacramento Monarchs";3;"true";"false";"false";"false";2652.5;0.5535714285714286;0.3333333333333333
+9;"SAC";"WE";"Sacramento Monarchs";4;"true";"false";"false";"false";2475.0;0.5;0.3333333333333333
+10;"SAC";"WE";"Sacramento Monarchs";6;"false";"false";"false";"false";2689.0000000000005;0.3333333333333333;
+4;"SAS";"WE";"San Antonio Silver Stars";6;"false";"false";"false";"false";2086.7000000000003;0.3793103448275862;
+5;"SAS";"WE";"San Antonio Silver Stars";7;"false";"false";"false";"false";2249.3;0.26785714285714285;
+6;"SAS";"WE";"San Antonio Silver Stars";7;"false";"false";"false";"false";1952.6999999999998;0.17857142857142858;
+7;"SAS";"WE";"San Antonio Silver Stars";6;"false";"false";"false";"false";2655.5;0.42592592592592593;
+8;"SAS";"WE";"San Antonio Silver Stars";2;"true";"true";"false";"false";2711.8;0.5892857142857143;0.4
+9;"SAS";"WE";"San Antonio Silver Stars";1;"true";"true";"true";"false";2645.3;0.6296296296296297;0.4444444444444444
+10;"SAS";"WE";"San Antonio Silver Stars";4;"true";"false";"false";"false";2786.0;0.46296296296296297;0.3333333333333333
+1;"SEA";"WE";"Seattle Storm";8;"false";"false";"false";"false";1688.2000000000003;0.18867924528301888;
+2;"SEA";"WE";"Seattle Storm";8;"false";"false";"false";"false";1979.3000000000002;0.3018867924528302;
+3;"SEA";"WE";"Seattle Storm";4;"true";"false";"false";"false";2458.8;0.5094339622641509;0.0
+4;"SEA";"WE";"Seattle Storm";5;"false";"false";"false";"false";2628.7;0.5;
+5;"SEA";"WE";"Seattle Storm";2;"true";"true";"true";"true";2617.2999999999997;0.5892857142857143;0.75
+6;"SEA";"WE";"Seattle Storm";2;"true";"false";"false";"false";2541.0;0.5892857142857143;0.3333333333333333
+7;"SEA";"WE";"Seattle Storm";4;"true";"false";"false";"false";2634.9;0.5185185185185185;0.3333333333333333
+8;"SEA";"WE";"Seattle Storm";4;"true";"false";"false";"false";2849.7;0.5;0.0
+9;"SEA";"WE";"Seattle Storm";2;"true";"false";"false";"false";2551.0;0.6481481481481481;0.3333333333333333
+10;"SEA";"WE";"Seattle Storm";2;"true";"false";"false";"false";2585.0999999999995;0.6111111111111112;0.3333333333333333
+1;"UTA";"WE";"Utah Starzz";5;"false";"false";"false";"false";2344.9;0.5849056603773585;
+2;"UTA";"WE";"Utah Starzz";3;"true";"false";"false";"false";2222.8999999999996;0.5660377358490566;0.0
+3;"UTA";"WE";"Utah Starzz";3;"true";"true";"false";"false";2330.1999999999994;0.6037735849056604;0.4
+1;"WAS";"EA";"Washington Mystics";4;"true";"false";"false";"false";2287.2999999999997;0.5094339622641509;0.0
+2;"WAS";"EA";"Washington Mystics";8;"false";"false";"false";"false";2091.2999999999997;0.2641509433962264;
+3;"WAS";"EA";"Washington Mystics";3;"true";"true";"false";"false";2365.0000000000005;0.5471698113207547;0.6
+4;"WAS";"EA";"Washington Mystics";7;"false";"false";"false";"false";2612.6;0.27586206896551724;
+5;"WAS";"EA";"Washington Mystics";4;"true";"false";"false";"false";2460.3999999999996;0.48148148148148145;0.3333333333333333
+6;"WAS";"EA";"Washington Mystics";5;"false";"false";"false";"false";2383.7000000000003;0.46296296296296297;
+7;"WAS";"EA";"Washington Mystics";4;"true";"false";"false";"false";2841.7999999999997;0.5555555555555556;0.0
+8;"WAS";"EA";"Washington Mystics";5;"false";"false";"false";"false";2444.4;0.4444444444444444;
+9;"WAS";"EA";"Washington Mystics";6;"false";"false";"false";"false";2237.4999999999995;0.2962962962962963;
+10;"WAS";"EA";"Washington Mystics";4;"true";"false";"false";"false";2485.1999999999994;0.4642857142857143;0.0
