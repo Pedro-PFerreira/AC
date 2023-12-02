@@ -18,7 +18,7 @@ replace_values(df, 'tmID')
 replace_values(df, 'bioID')
 
 # drop the columns that are not needed
-df = df.drop(['rank', 'pos', 'dq', 'PostDQ'], axis=1)
+df = df.drop(['rank', 'pos', 'dq', 'PostDQ', 'awards'], axis=1)
 
 # replace missing values with the mean
 df = df.fillna(df.mean())
