@@ -1,7 +1,9 @@
 import pandas as pd
 import numpy as np
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+import lightgbm as lgb
 
 df = pd.read_csv('new_final_dataset_11.csv', delimiter=';')
 
@@ -42,7 +44,7 @@ replace_values(df, 'coachID')
 # store the teamID and the team name in a dictionary
 teamID_to_name = df[['tmID', 'name']].drop_duplicates().set_index('tmID').to_dict()['name']
 
-df = df.drop(['name', 'stint', 'won', 'lost', 'post_wins', 'post_losses', 'teams_score'], axis=1)
+df = df.drop(['name', 'stint', 'won', 'lost', 'post_wins', 'post_losses'], axis=1)
 
 # convert playoff, firstRound, semis and finals to boolean
 
@@ -56,12 +58,9 @@ df = df.fillna(df.mean())
 
 # Define the sliding window size (e.g., 1 year)
 window_size = 2
-accuracies = []
+accuracies_lr = []
+accuracies_lgbm = []
 
-# Create the model
-model = RandomForestClassifier(n_estimators=150, max_depth=5, random_state=0,
-                             class_weight='balanced', criterion='entropy', max_leaf_nodes=15)
-   
 for year in range(2, 11):
     # Select the data for the current year
     current_year_data = df[df['year'] == year]
@@ -75,41 +74,69 @@ for year in range(2, 11):
     test_features = current_year_data.drop(['playoff'], axis=1)
     test_label = current_year_data['playoff']
     
-    model.fit(train_features, train_label)
+    # Logistic Regression with L1 regularization
+    lr_model = LogisticRegression(penalty='l1', solver='liblinear', random_state=42)
+    lr_model.fit(train_features, train_label)
     
-    predictions = model.predict(test_features)
+    # Make predictions_lgbm on the test data
+    predictions_lr = lr_model.predict(test_features)
     
-    # Calculate the accuracy for the current year
-    accuracy = np.mean(predictions == test_label)
-    accuracies.append(accuracy)
+    # Calculate the accuracy for the current year using Logistic Regression
+    accuracy_lr = accuracy_score(test_label, predictions_lr)
+    accuracies_lr.append(accuracy_lr)
     
-    print(f"The accuracy for year {year} is: {accuracy}")
+    print(f"The accuracy for year {year} (Logistic Regression) is: {accuracy_lr}")
+
+    # LightGBM
+    lgbm_model = lgb.LGBMClassifier(n_estimators=100, random_state=42)
+    lgbm_model.fit(train_features, train_label)
+    
+    # Make predictions_lgbm on the test data
+    predictions_lgbm = lgbm_model.predict(test_features)
+    
+    # Calculate the accuracy for the current year using LightGBM
+    accuracy_lgbm = accuracy_score(test_label, predictions_lgbm)
+    accuracies_lgbm.append(accuracy_lgbm)
+    
+    print(f"The accuracy for year {year} (LightGBM) is: {accuracy_lgbm}")
 
     # Calculate the precision for the current year
 
-    precision = np.mean(predictions[predictions == 1] == test_label[predictions == 1])
+    precision = np.mean(predictions_lgbm[predictions_lgbm == 1] == test_label[predictions_lgbm == 1])
     print(f"The precision for year {year} is: {precision}")
 
     # Calculate the F-measure for the current year
 
-    f_measure = 2 * (precision * accuracy) / (precision + accuracy)
+    f_measure = 2 * (precision * accuracy_lgbm) / (precision + accuracy_lgbm)
 
     print(f"The F-measure for year {year} is: {f_measure}")
 
+# Calculate the overall accuracy across all years
+overall_accuracy = np.mean(accuracies_lgbm)
+print(f"The overall accuracy of the model is: {overall_accuracy}")
+
+# Calculate the overall precision across all years
+overall_precision = np.mean(precision)
+print(f"The overall precision of the model is: {overall_precision}")
+
+# Calculate the overall F-measure across all years
+overall_f_measure = 2 * (overall_precision * overall_accuracy) / (overall_precision + overall_accuracy)
+print(f"The overall F-measure of the model is: {overall_f_measure}")
+
 # Retrive the name of the teams that go to the playoffs in the last year
 
-for i in range(12):
+playoff_teams = df[df['year'] == 11][df['playoff'] == 1]['tmID'].values
 
-    playoff_teams = df[df['year'] == i][df['playoff'] == True]['tmID'].values
+print(df[df['year'] == 11][df['playoff'] == True]['tmID'].unique())
 
-    # print(playoff_teams)
+#print(playoff_teams)
 
-    # Convert the Ids to the team names
+# Convert the Ids to the team names
 
-    playoff_teams = [teamID_to_name[team] for team in playoff_teams]
+playoff_teams = [teamID_to_name[team] for team in playoff_teams]
 
-    # Remove duplicate names
+# Remove duplicate names
 
-    playoff_teams = list(set(playoff_teams))
-    print("Year: ", i, "Playoff teams:")
-    print(playoff_teams)
+playoff_teams = list(set(playoff_teams))
+
+#print(playoff_teams)
