@@ -206,7 +206,6 @@ Machine Learning Project
 
 ![Wins](./images/wins.png)
 
-
 ![Losses](./images/losses.png)
 
 - Overall statistics: Since we had several overall statistics, we chose to do a boxplot chart to see the evolution of the teams' points over the these 10-year period. Even though we knew that free-throws, assists, 3-points and field-points are correlated to the "points" variable, we decided to keep them.
@@ -232,11 +231,17 @@ Machine Learning Project
 #### Coaches
 - In this dataset, all the data was organized and normalized, so there was no need to use a technique or treatment for outliers and missing values. With regard to analyzing the data in terms of relevance to the prediction we wanted to make, we excluded only two columns: stints and lgID, since the leagues are the same for all the coaches and would therefore not be differentiating factors. The remaining attributes bring value to the predictions in the sense that they are based on the number of wins and losses of each coach, and are therefore directly related to the probability of their team qualifying for the playoffs or not.
 
+![Number of wins of each coach](./images/number_wins_coaches.png)
+
+- In terms of correlated attributes, we mad the correlation matrix to analyse this metric and we conclude that none of the attributes of this dataset is correlated to each other.
+
+![Correlation Matrix for Coaches](./images/correlation_matrix_coaches.png)
+
 
 #### Award Player
 - This dataset contains few attributes, so from our analysis they are all relevant except for the information about the leagues, since as in the previous dataset this information is the same for all lines and therefore has no influence on differentiating results.
 - We thought that one way of integrating this information about players and coaches who have won awards into the corresponding tables would be to add a column to the player and coach tables with Boolean values to inform whether or not a player or coach has won an award. This data is useful in the sense that an award-winning player or coach brings a lot of value to the team and therefore increases the likelihood of leading it to victory.
-- From our analysis, there are no correlated attributes either, so it wasn't necessary to eliminate any more columns.
+- From our analysis, there are no correlated attributes either, so it wasn't necessary to eliminate any more columns. However it is not possible to show the correlation matrix because the number os attributes is not enough.
 
 ### Data Preparation
 
@@ -246,7 +251,7 @@ Machine Learning Project
 - We decided to use RapidMiner for the data processing tool, as it would be quicker to obtain the clean csv and it is a tool that has already been used by all the members of the group, so everyone is comfortable with it for this stage of the project.
 - So we divided up the datasets among the three team members. The following had to be dealt with:
     - eliminate duplicates
-    - checking for undefined values and/or outliers
+    - checking for undefined values and/or outliers and normalize/replace them
     - eliminating rows that were not used or related to any other table, as they had all the values missing
     
 - The datasets that required the treatment described above were:

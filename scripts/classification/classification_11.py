@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 
-df = pd.read_csv('new_final_dataset_11.csv', delimiter=';')
+df = pd.read_csv('../../new_final_dataset_11.csv', delimiter=';')
 
 columns_to_update = ['playerScore', 'postPlayerScore', 'playerID', 'threeAccuracy', 'postThreeAccuracy', 'bmi']
 
@@ -59,10 +59,9 @@ window_size = 2
 accuracies = []
 
 # Create the model
-model = RandomForestClassifier(n_estimators=150, max_depth=5, random_state=0,
-                             class_weight='balanced', criterion='entropy', max_leaf_nodes=15)
+model = DecisionTreeClassifier(criterion='entropy', max_depth=4, random_state=0)
    
-for year in range(2, 11):
+for year in range(2, 12):
     # Select the data for the current year
     current_year_data = df[df['year'] == year]
     
@@ -98,7 +97,7 @@ for year in range(2, 11):
 
 # Retrive the name of the teams that go to the playoffs in the last year
 
-for i in range(12):
+for i in range(1,12):
 
     playoff_teams = df[df['year'] == i][df['playoff'] == True]['tmID'].values
 
