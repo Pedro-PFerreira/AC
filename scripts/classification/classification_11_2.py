@@ -2,9 +2,10 @@ import pandas as pd
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 from collections import defaultdict
+import time
 
-df_ea = pd.read_csv('../../new_final_dataset_ea.csv', delimiter=';')
-df_we = pd.read_csv('../../new_final_dataset_we.csv', delimiter=';')
+df_ea = pd.read_csv('./new_final_dataset_ea.csv', delimiter=';')
+df_we = pd.read_csv('./new_final_dataset_we.csv', delimiter=';')
 
 columns_to_update = ['playerScore', 'postPlayerScore', 'playerID', 'threeAccuracy', 'postThreeAccuracy', 'bmi']
 
@@ -71,6 +72,13 @@ df_we['finals'] = df_we['finals'].astype('bool')
 df_ea = df_ea.fillna(df_ea.mean())
 df_we = df_we.fillna(df_ea.mean())
 
+accuracies = []
+precisions = []
+recalls = []
+f1_scores = []
+times = []
+
+
 def prediction(df, conf):
     # Define the sliding window size (e.g., 1 year)
     window_size = 2
@@ -78,7 +86,7 @@ def prediction(df, conf):
     # Create the model
     model = DecisionTreeClassifier(criterion='gini', max_depth=3)
 
-    for year in range(2, 12):
+    for year in range(2, 11):
         # Select the data for the current year
         current_year_data = df[df['year'] == year]
 
@@ -91,10 +99,14 @@ def prediction(df, conf):
         test_features = current_year_data.drop(['playoff'], axis=1)
         test_label = current_year_data['playoff']
 
+        time_start = time.time()
+
         model.fit(train_features, train_label)
 
         # Predict probabilities instead of binary predictions
         probabilities = model.predict_proba(test_features)[:, 1]
+
+        time_end = time.time()
 
         # Apply threshold to convert probabilities to binary predictions (0 or 1)
         threshold = 0.6
@@ -104,7 +116,25 @@ def prediction(df, conf):
         accuracy = np.mean(binary_predictions == test_label)
         print(f"The accuracy for year {year} is: {accuracy}")
 
-        # ... (Your existing evaluation metrics)
+        # Calculate the precision for the current year
+        precision = np.mean(binary_predictions[binary_predictions == 1] == test_label[binary_predictions == 1])
+        print(f"The precision for year {year} is: {precision}")
+
+        # Calculate the recall for the current year
+        recall = np.mean(binary_predictions[binary_predictions == 1] == test_label[binary_predictions == 1])
+
+        # Calculate the F-measure for the current year
+        f_measure = 2 * (precision * recall) / (precision + recall)
+
+        print(f"The F-measure for year {year} is: {f_measure}")
+
+        accuracies.append(accuracy)
+        precisions.append(precision)
+        recalls.append(recall)
+        f1_scores.append(f_measure)
+        times.append(time_end - time_start)
+        print(f'The time of the execution is: {(time_end - time_start)* 1000} milliseconds.')
+
 
         # Create a DataFrame to store aggregated probabilities for each team
         team_probabilities = pd.DataFrame({
@@ -129,10 +159,14 @@ def prediction(df, conf):
         # Print the top teams for each conference
         print(f"Year: {year}, Top 4 Teams: {conference_teams}")
 
-# ... (Your existing code)
-
 # Uncomment the following lines to run the modified code
 print('Eastern Conference:')
 prediction(df_ea, 'ea')
 print('Western Conference:')
 prediction(df_we, 'we')
+
+print(f'The average accuracy is: {np.mean(accuracies)}')
+print(f'The average precision is: {np.mean(precisions)}')
+print(f'The average recall is: {np.mean(recalls)}')
+print(f'The average F1-score is: {np.mean(f1_scores)}')
+print(f'The average time is: {np.mean(times) * 1000} milliseconds.')
