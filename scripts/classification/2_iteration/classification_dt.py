@@ -43,7 +43,7 @@ for year in range(2, 10):
     test_label = current_year_data['playoff']
     
     # Create the model
-    model = DecisionTreeClassifier()
+    model = DecisionTreeClassifier(criterion='gini', max_depth=3)
     
     # Train the model
     model.fit(train_features, train_label)
