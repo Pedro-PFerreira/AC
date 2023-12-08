@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn.tree import DecisionTreeClassifier
-from collections import defaultdict
+from sklearn.ensemble import RandomForestClassifier
 import time
 
 df_ea = pd.read_csv('./new_final_dataset_ea.csv', delimiter=';')
@@ -84,9 +83,9 @@ def prediction(df, conf):
     window_size = 2
 
     # Create the model
-    model = DecisionTreeClassifier(criterion='gini', max_depth=3)
+    model = RandomForestClassifier()
 
-    for year in range(2, 11):
+    for year in range(2, 12):
         # Select the data for the current year
         current_year_data = df[df['year'] == year]
 

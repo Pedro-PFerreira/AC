@@ -1,7 +1,7 @@
 import pandas as pd
-from scipy.stats import spearmanr, chi2_contingency
+from scipy.stats import chi2_contingency
 
-df = pd.read_csv('final_dataset.csv', delimiter=';')
+df = pd.read_csv('./new_final_dataset.csv', delimiter=';')
 
 # Function to compute eta squared
 def compute_eta_squared(nominal_col, ordinal_col):
